@@ -5,9 +5,7 @@ import { Container } from './styles'
 const TodoForm = () => {
     const { createTodo } = useContext(TodoContext)
 
-    const [todo, setTodo] = useState({
-        title: ''
-    })
+    const [todo, setTodo] = useState({})
 
     const handleFormSubmit = e => {
         e.preventDefault()
@@ -19,10 +17,10 @@ const TodoForm = () => {
             <form onSubmit={handleFormSubmit}>
                 <input 
                     type="text" 
-                    value={todo.title} 
+                    value={todo?.title} 
                     onChange={e => setTodo({ ...todo, title: e.target.value })} 
                     placeholder="Título da tarefa"
-                    />
+                />
                 <button type="submit">Enviar</button>
             </form>
         </Container>
