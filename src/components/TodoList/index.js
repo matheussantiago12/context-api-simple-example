@@ -19,8 +19,8 @@ const TodoList = () => {
         <Container>
             {todos.sort(sortById).map(todo => (
                 <div style={{ display: 'flex' }} className="todo-row" key={todo.id}>
-                    <p><b>{todo.id}</b> - {todo.title} - {todo.done ? "Concluído" : "A fazer"}</p>
-                    <button onClick={() => toggleDone(todo.id)}>{todo.done ? "Retomar" : "Concluir"}</button>
+                    <p><b>{todo.id}</b> - {todo.title} - {todo.done ? "Done" : "To do"}</p>
+                    <button onClick={() => toggleDone(todo.id)}>{todo.done ? "Resume" : "Done"}</button>
                 </div>
             ))}
         </Container>

@@ -19,9 +19,9 @@ const TodoForm = () => {
                     type="text" 
                     value={todo?.title} 
                     onChange={e => setTodo({ ...todo, title: e.target.value })} 
-                    placeholder="Título da tarefa"
+                    placeholder="Task title"
                 />
-                <button type="submit">Enviar</button>
+                <button type="submit">Submit</button>
             </form>
         </Container>
     )
