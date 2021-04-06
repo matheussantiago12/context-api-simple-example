@@ -1,6 +1,10 @@
 ### Context API Simple Example
 
-Exemplo simples da aplicação da context API do React
+Simple example of React Context API application
+
+In this repository we have 2 examples:
+  - **Todos**: with **useState()**
+  - **Products**: with **useReducer()**
 
 ```
 $ npm install
