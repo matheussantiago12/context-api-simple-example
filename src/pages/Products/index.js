@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductForm from '../../components/ProductForm'
 import ProductList from '../../components/ProductList'
-import { ProductProvider } from '../../contexts/ProductContext'
+import { ProductProvider } from '../../contexts/Product/context'
 import { Container } from './styles'
 
 const Todos = () => {

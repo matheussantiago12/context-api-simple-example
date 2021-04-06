@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
-import { ProductContext } from '../../contexts/ProductContext'
+import { ProductContext } from '../../contexts/Product/context'
 import { Container } from './styles'
+import { removeProduct } from '../../contexts/Product/actions'
 
 const ProductList = () => {
     const { state, dispatch } = useContext(ProductContext)
@@ -17,10 +18,7 @@ const ProductList = () => {
     }
 
     const handleProductRemove = id => {
-        dispatch({
-            type: 'REMOVE_PRODUCT',
-            payload: id
-        })
+        dispatch(removeProduct(id))
     }
 
     return (
