@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { ProductContext } from '../../contexts/ProductContext'
+import { ProductContext, addProduct } from '../../contexts/ProductContext'
 import { Container } from './styles'
 
 const ProductForm = () => {
@@ -9,10 +9,7 @@ const ProductForm = () => {
     const handleFormSubmit = e => {
         e.preventDefault()
 
-        dispatch({
-            type: 'ADD_PRODUCT',
-            payload: product
-        })
+        dispatch(addProduct(product))
     }
 
     return (
